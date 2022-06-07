@@ -1,0 +1,19 @@
+logging:
+  config: classpath:logconfig/logback-dev.xml
+
+dubbo:
+  group: dev
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    port: 6660
+    dispatcher: message
+    threadpool: fixed
+    threads: 400
+    queues: 30000
+  qos:
+    enable: false
+  dubbo1:
+    group: dev
+  dubbo2:
+    group: dev
