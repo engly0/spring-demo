@@ -1,4 +1,4 @@
-package me.yangtao.spring.web.service.interfaces;
+package me.yangtao.spring.web.interfaces;
 
 import lombok.extern.slf4j.Slf4j;
 import me.yangtao.spring.demo.api.request.OperatorRequest;

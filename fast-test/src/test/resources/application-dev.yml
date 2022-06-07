@@ -1,0 +1,32 @@
+logging:
+  config: classpath:logconfig/logback-dev.xml
+
+redis:
+  maxTotal: 100
+  maxIdle: 20
+  minIdle: 5
+  maxWaitMillis: 1000
+  commandTimeout: 1000
+  redisAuth: ''
+  clusterNodes:
+    -
+      host: 127.0.0.1
+      port: 6179
+    -
+      host: 127.0.0.1
+      port: 6279
+    -
+      host: 127.0.0.1
+      port: 6379
+    -
+      host: 127.0.0.1
+      port: 6180
+    -
+      host: 127.0.0.1
+      port: 6280
+    -
+      host: 127.0.0.1
+      port: 6380
+
+
+
