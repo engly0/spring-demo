@@ -1,4 +1,4 @@
-package me.yangtao.web.service;
+package me.yangtao.spring.web.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@SpringBootApplication(scanBasePackages = {"me.yangtao","me.yangtao.bz.tag"},
+@SpringBootApplication(scanBasePackages = {"me.yangtao","me.yangtao.spring"},
         exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 @EnableAspectJAutoProxy(exposeProxy = true, proxyTargetClass = true)
 @EnableTransactionManagement

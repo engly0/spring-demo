@@ -12,6 +12,7 @@
     <artifactId>web-demo</artifactId>
     <version>${demo.version}</version>
     <properties>
+        <resource.delimiter>@</resource.delimiter>
         <service_name>web-demo</service_name>
     </properties>
 
@@ -232,7 +233,10 @@
                 <version>3.1.0</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
-                    <useDefaultDelimiters>true</useDefaultDelimiters>
+                    <delimiters>
+                        <delimiter>${resource.delimiter}</delimiter>
+                    </delimiters>
+                    <useDefaultDelimiters>false</useDefaultDelimiters>
                 </configuration>
             </plugin>
 
