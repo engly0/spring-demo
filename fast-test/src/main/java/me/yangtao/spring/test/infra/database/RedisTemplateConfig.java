@@ -33,10 +33,16 @@ public class RedisTemplateConfig extends RedisClusterConfig {
         return getLettuceConnectionFactory(redisPoolConfig);
     }
 
+    @Bean(name = "stringRedisSerializer")
+    public StringRedisSerializer getStringRedisSerializer(){
+        return new StringRedisSerializer();
+    }
+
     @Bean(name = "clusterStringRedisTemplate")
     public RedisTemplate<String, String> redisClusterTemplate4String(
-            @Qualifier("clusterConnectionFactory") LettuceConnectionFactory redisClusterConnectionFactory) {
-        return getRedisTemplate(redisClusterConnectionFactory, new StringRedisSerializer());
+            @Qualifier("clusterConnectionFactory") LettuceConnectionFactory redisClusterConnectionFactory,
+            @Qualifier("stringRedisSerializer") StringRedisSerializer stringRedisSerializer) {
+        return getRedisTemplate(redisClusterConnectionFactory, stringRedisSerializer);
     }
 
     @Bean(name = "clusterNumberRedisTemplate")
